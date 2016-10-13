@@ -25,22 +25,26 @@ public class PrimitiveUtfChars {
         tex.writeChars(texto);
         tex.writeUTF(texto);
         
+        String cadena = text.readUTF();
         
-        
-        System.out.println("WriteUTF escribiu: "+ text.readUTF());
+        System.out.println("WriteUTF escribiu: "+ cadena);
         System.out.println("WriteUTF escribiu"+tex.size()+" bytes");
         
-        for(int i=0;i<texto.length();i++){
-        System.out.println("WriteChars escribiu: "+ text.readChar());
-        System.out.println("WriteChar escribiu: "+tex.size()+" bytes");        
+        String cadea = "";
+        for(int i = 0;i<texto.length();i++){
+        cadea += text.readChar();              
         }
         
-        System.out.println("WriteUTF escribiu: "+ text.readUTF());
+        System.out.println("WriteChars escribiu: "+ cadea);
+        System.out.println("WriteChar escribiu: "+tex.size()+" bytes"); 
+        
+        System.out.println("WriteUTF escribiu: "+ cadena);
         System.out.println("WriteUTF escribiu"+tex.size()+" bytes");
         
-        System.out.println("Bytes totais escritos: ");
-        System.out.println("Lemos a primeira cadea en UTF: ");
-        System.out.println("Número de bytes lidos: "+" bytes");
+        System.out.println("Bytes totais escritos: "+tex.size());
+        System.out.println("Lemos a primeira cadea en UTF: "+cadena);
+        int lido = cadea.length() + 2;
+        System.out.println("Número de bytes lidos: "+lido+" bytes");
         System.out.println("Bytes restantes por ler: ");
         System.out.println("Lemos a segunda cadea Chars: ");
         System.out.println("O número de bytes lidos e: ");
